@@ -1,0 +1,26 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+## Archimedes procedure for porous material density determination
+
+Experimental procedure is as follow, for further detail refer to standard ASTM D7263. 
+
+1. Measure temperature of liquid to determine its ($\rho_{\text{water}}$). Find object theoretical full density ( $\rho_{\text{solid}}$ ) and wax density ($\rho_{wax}$) from datasheet
+2. Measure mass of sample(s) ($M_t$)
+3. Apply two coats of wax to the sample(s)
+4. Measure mass of Coated sample(s) ($M_c$)
+5. Measure mass of Coated Sample(s) submerged ($M_{sub}$)
+
+
+\begin{equation}
+    \text{density}, \rho_b = \frac{M_t}{\frac{(M_c - M_{sub})}{\rho_{water}} - \frac{(M_c - M_t)}{\rho_{wax}}}
+\end{equation}
+
+
+\begin{equation}
+    \text{true density}, \pi_d = \frac{ \rho_b}{\rho_{\text{solid}}} * 100
+\end{equation}
+
+Parts using two powder type are made. Parts labeled bimodal should have a higher density then parts labelled unimodal.
